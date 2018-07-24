@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<header class=container-fluid>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</header>
+<style>
+.bg {
+    /* The image used */
+    background-image: url("https://i1.wp.com/ignitecorp.com.au/wp-content/uploads/2016/07/Website-background.jpg");
+
+    /* Full height */
+    height: 820px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+</head>
+
+
+<body class="bg">
+         <form name="Item_1" action="{{ url_for('load') }}" method="POST" 
+         enctype = "multipart/form-data">
+         
+         <h2><font color="white"><a href="www.google.com">Skill rating </a></font></h2>
+         <font color="white"><table class="table table-bordered">
+         	  <tr>
+		  <th> skill </th>
+		  <th> rating </th>
+		  </tr>
+		
+		 {% for key,value  in parse.items() %}
+		 
+		                   <tr>
+		                   <th>   {{key}}  </th>
+		                   <td>  {{value}}  </td> 
+		                   </tr>
+		 {% endfor %}
+                 
+		 
+         </table></font>
+         
+         </form>
+          <br> <br> <br> <br>
+          <form name="Item_2" action="http://localhost:5000/" method="POST" enctype = "multipart/form-data">
+          <button type="submit" class="btn btn-outline-success"> LOGOUT </button> </b></p>
+          </form>
+         
+
+</body>
+</html>
+  
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<header class=container-fluid>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</header>
+<style>
+.bg {
+    /* The image used */
+    background-image: url("https://i1.wp.com/ignitecorp.com.au/wp-content/uploads/2016/07/Website-background.jpg");
+
+    /* Full height */
+    height: 820px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pad_10{
+padding:10px;
+}
+</style>
+</head>
+
+
+<body class="bg ">
+<div class="container form-group">
+              <!--<img src="images.jpg" class="img-rounded" alt="Cinque Terre">-->
+	      <form action = "http://localhost:5000/uploader" method = "POST" 
+		 enctype = "multipart/form-data">
+		 
+		<h2> <center> <font color="white"> Enter user details </font></center> </h2>
+		<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Name" name="name">
+                <br> <br> <br>
+		<input class="form-control" id="date" name="dob" placeholder="MM/DD/YYY" type="text"/>
+                <br> <br> <br>
+		<p><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email"></p>
+                <br> <br> <br>
+		<input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
+                 <br> <br>
+		<button type="submit" class="btn btn-outline-success">Next</button>
+		
+		 
+	      </form>
+</div>
+
+</body>
+</html>
